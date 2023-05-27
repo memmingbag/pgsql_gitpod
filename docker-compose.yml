@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  pgsql:
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pw1234
+      POSTGRES_DB: gitpod
+    networks:
+      - pgsql
+    ports:
+      - "5432:5432"
+networks:
+  pgsql:
+    driver: bridge

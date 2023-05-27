@@ -1,0 +1,15 @@
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up
+
+
+ports:
+  - port: 5432
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+    - cweijan.vscode-database-client2
